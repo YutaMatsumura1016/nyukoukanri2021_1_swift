@@ -1,24 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="nyukoukanri2021_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ao-ps-kdf">
+                                <rect key="frame" x="0.0" y="32" width="414" height="775"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nwm-2U-07p">
+                                <rect key="frame" x="20" y="432" width="374" height="30"/>
+                                <state key="normal" title="早稲田"/>
+                                <connections>
+                                    <action selector="Waseda:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R5y-vU-gRM"/>
+                                    <segue destination="dNM-x7-wkd" kind="presentation" identifier="toWaseda" id="P0W-qw-UGR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJ1-pc-61N">
+                                <rect key="frame" x="20" y="512" width="374" height="30"/>
+                                <state key="normal" title="戸　山"/>
+                                <connections>
+                                    <action selector="Toyama:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eYE-dX-4lh"/>
+                                    <segue destination="dNM-x7-wkd" kind="presentation" identifier="toToyama" id="FqN-Cn-lRQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9Z-5t-AN5">
+                                <rect key="frame" x="20" y="742" width="374" height="30"/>
+                                <state key="normal" title="ログイン"/>
+                                <connections>
+                                    <action selector="Login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CD6-1d-cnE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83B-Ze-RRB">
+                                <rect key="frame" x="20" y="812" width="374" height="30"/>
+                                <state key="normal" title="閉じる"/>
+                                <connections>
+                                    <action selector="closeWebView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PyR-tp-WwO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="83B-Ze-RRB" secondAttribute="trailing" constant="20" id="1jJ-Jq-XRn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eJ1-pc-61N" secondAttribute="trailing" constant="20" id="1lN-qT-TcD"/>
+                            <constraint firstItem="8ao-ps-kdf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="51Z-pV-pvJ"/>
+                            <constraint firstItem="W9Z-5t-AN5" firstAttribute="top" secondItem="eJ1-pc-61N" secondAttribute="bottom" constant="200" id="65z-kR-r53"/>
+                            <constraint firstItem="83B-Ze-RRB" firstAttribute="top" secondItem="W9Z-5t-AN5" secondAttribute="bottom" constant="40" id="Eiy-SX-EiI"/>
+                            <constraint firstItem="8ao-ps-kdf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="32" id="Is2-ug-46W"/>
+                            <constraint firstItem="eJ1-pc-61N" firstAttribute="top" secondItem="Nwm-2U-07p" secondAttribute="bottom" constant="50" id="Kz1-dB-fAI"/>
+                            <constraint firstItem="Nwm-2U-07p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="L0O-sx-3V3"/>
+                            <constraint firstItem="W9Z-5t-AN5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="OB1-Dt-vUG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W9Z-5t-AN5" secondAttribute="trailing" constant="20" id="QuP-Pg-LrU"/>
+                            <constraint firstItem="8ao-ps-kdf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Vkd-HP-QJY"/>
+                            <constraint firstItem="eJ1-pc-61N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VvH-37-9aK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nwm-2U-07p" secondAttribute="trailing" constant="20" id="fkl-I1-odE"/>
+                            <constraint firstItem="83B-Ze-RRB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="riz-gh-Fcb"/>
+                            <constraint firstItem="83B-Ze-RRB" firstAttribute="top" secondItem="8ao-ps-kdf" secondAttribute="bottom" constant="5" id="ynH-ng-d11"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="83B-Ze-RRB" secondAttribute="bottom" constant="20" id="zam-iK-zjz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonFinishLogin" destination="83B-Ze-RRB" id="MA8-L4-SGc"/>
+                        <outlet property="buttonLogin" destination="W9Z-5t-AN5" id="aGN-Zc-aII"/>
+                        <outlet property="buttonToyama" destination="eJ1-pc-61N" id="qPA-cd-PFN"/>
+                        <outlet property="buttonWaseda" destination="Nwm-2U-07p" id="4i5-75-9lm"/>
+                        <outlet property="loginWebView" destination="8ao-ps-kdf" id="Mhk-Rw-s4Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-17.39130434782609" y="116.51785714285714"/>
+        </scene>
+        <!--readViewController-->
+        <scene sceneID="X5V-bh-gf5">
+            <objects>
+                <viewController title="readViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="dNM-x7-wkd" customClass="readViewController" customModule="nyukoukanri2021_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="or2-Xd-66f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5C-Be-Tvf">
+                                <rect key="frame" x="20" y="676" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="再読み込み"/>
+                                <connections>
+                                    <action selector="reLoad:" destination="dNM-x7-wkd" eventType="touchUpInside" id="PR9-4E-C0a"/>
+                                </connections>
+                            </button>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6w-Mv-37J">
+                                <rect key="frame" x="0.0" y="35" width="414" height="400"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="HsD-FR-jKB"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="s15-4f-ywJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="s15-4f-ywJ" firstAttribute="bottom" secondItem="R5C-Be-Tvf" secondAttribute="bottom" constant="150" id="3eX-Yc-rYB"/>
+                            <constraint firstItem="s6w-Mv-37J" firstAttribute="top" secondItem="or2-Xd-66f" secondAttribute="top" constant="35" id="AhU-r9-Yd1"/>
+                            <constraint firstItem="R5C-Be-Tvf" firstAttribute="leading" secondItem="s15-4f-ywJ" secondAttribute="leading" constant="20" id="G29-TU-hEz"/>
+                            <constraint firstItem="s6w-Mv-37J" firstAttribute="trailing" secondItem="s15-4f-ywJ" secondAttribute="trailing" id="PT8-sL-biP"/>
+                            <constraint firstItem="s15-4f-ywJ" firstAttribute="trailing" secondItem="R5C-Be-Tvf" secondAttribute="trailing" constant="20" id="QM8-tz-58v"/>
+                            <constraint firstItem="s6w-Mv-37J" firstAttribute="leading" secondItem="s15-4f-ywJ" secondAttribute="leading" id="e2X-ZS-c9r"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="reLoad" destination="R5C-Be-Tvf" id="V9a-rL-Bgo"/>
+                        <outlet property="webView" destination="s6w-Mv-37J" id="VNB-0r-3q0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hrh-fC-OuP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="831.88405797101461" y="116.51785714285714"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="FqN-Cn-lRQ"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

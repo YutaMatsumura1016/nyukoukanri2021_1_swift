@@ -15,6 +15,7 @@
 		0FF90C9226CCB29E00D8059F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF90C9026CCB29E00D8059F /* LaunchScreen.storyboard */; };
 		0FF90C9D26CCB29F00D8059F /* nyukoukanri2021_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF90C9C26CCB29F00D8059F /* nyukoukanri2021_1Tests.swift */; };
 		0FF90CA826CCB29F00D8059F /* nyukoukanri2021_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF90CA726CCB29F00D8059F /* nyukoukanri2021_1UITests.swift */; };
+		0FF90CB726CCBC2D00D8059F /* readViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF90CB626CCBC2D00D8059F /* readViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		0FF90CA326CCB29F00D8059F /* nyukoukanri2021_1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nyukoukanri2021_1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FF90CA726CCB29F00D8059F /* nyukoukanri2021_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nyukoukanri2021_1UITests.swift; sourceTree = "<group>"; };
 		0FF90CA926CCB29F00D8059F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FF90CB526CCB4CB00D8059F /* nyukoukanri2021_1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = nyukoukanri2021_1.entitlements; sourceTree = "<group>"; };
+		0FF90CB626CCBC2D00D8059F /* readViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = readViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +102,12 @@
 		0FF90C8426CCB29D00D8059F /* nyukoukanri2021_1 */ = {
 			isa = PBXGroup;
 			children = (
+				0FF90CB526CCB4CB00D8059F /* nyukoukanri2021_1.entitlements */,
 				0FF90C8526CCB29D00D8059F /* AppDelegate.swift */,
 				0FF90C8726CCB29D00D8059F /* SceneDelegate.swift */,
 				0FF90C8926CCB29D00D8059F /* ViewController.swift */,
 				0FF90C8B26CCB29D00D8059F /* Main.storyboard */,
+				0FF90CB626CCBC2D00D8059F /* readViewController.swift */,
 				0FF90C8E26CCB29E00D8059F /* Assets.xcassets */,
 				0FF90C9026CCB29E00D8059F /* LaunchScreen.storyboard */,
 				0FF90C9326CCB29E00D8059F /* Info.plist */,
@@ -260,6 +265,7 @@
 			files = (
 				0FF90C8A26CCB29D00D8059F /* ViewController.swift in Sources */,
 				0FF90C8626CCB29D00D8059F /* AppDelegate.swift in Sources */,
+				0FF90CB726CCBC2D00D8059F /* readViewController.swift in Sources */,
 				0FF90C8826CCB29D00D8059F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +442,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = nyukoukanri2021_1/nyukoukanri2021_1.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X72VXGZ9C2;
 				INFOPLIST_FILE = nyukoukanri2021_1/Info.plist;
@@ -456,6 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = nyukoukanri2021_1/nyukoukanri2021_1.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X72VXGZ9C2;
 				INFOPLIST_FILE = nyukoukanri2021_1/Info.plist;
