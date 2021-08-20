@@ -7,9 +7,6 @@ class readViewController: UIViewController, NFCTagReaderSessionDelegate, WKNavig
     //初期化
     var session: NFCTagReaderSession?
     var gate: String = "str"
-    var idmString: String = "str"
-    var reading: Bool = false
-    var i: Int = 1
     var sentURL: String = "str"{
         didSet{
             openURL(urlString: sentURL)
@@ -46,7 +43,6 @@ class readViewController: UIViewController, NFCTagReaderSessionDelegate, WKNavig
     func readNFC(){
         self.session = NFCTagReaderSession(pollingOption: .iso18092, delegate: self)
         self.session?.begin()
-        reading = true
     }
     
     
@@ -103,15 +99,13 @@ class readViewController: UIViewController, NFCTagReaderSessionDelegate, WKNavig
             }
             
             let idmString0: String = feliCaTag.currentIDm.map{String(format: "%.2hhx", $0)}.joined()
-            self.idmString = idmString0.uppercased()
-            print(self.idmString)
+            let idmString = "0" + (idmString0.uppercased().dropFirst(1))
             
-            session.alertMessage = self.idmString
+            session.alertMessage = idmString
             session.invalidate()
-            self.reading = false
             
             Thread.sleep(forTimeInterval: 1.5)
-            self.sentURL = "https://script.google.com/a/wasedasai.net/macros/s/AKfycbzdl8gVXhd2Dkqy1B6-rTGKD_ewKWpS2FimTIkZiOA2bVf_IQo/exec?idm=" + self.idmString + "&&gate=" + self.gate
+            self.sentURL = "https://script.google.com/a/wasedasai.net/macros/s/AKfycbzdl8gVXhd2Dkqy1B6-rTGKD_ewKWpS2FimTIkZiOA2bVf_IQo/exec?idm=" + idmString + "&&gate=" + self.gate
 
         }
     }

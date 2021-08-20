@@ -58,11 +58,9 @@
 	</array>
 	<key>com.apple.developer.nfc.readersession.felica.systemcodes</key>
 	<array>
-		<string>0003</string>
 		<string>FE00</string>
-		<string>8E4B</string>
 	</array>
-	<key>UISupportedInterfaceOrientations~ipad</key>
+	<key>.</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
