@@ -443,7 +443,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = nyukoukanri2021_1/nyukoukanri2021_1.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: motoya shiraki (X72VXGZ9C2)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = Alpha1.1;
 				DEVELOPMENT_TEAM = X72VXGZ9C2;
 				INFOPLIST_FILE = nyukoukanri2021_1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -451,8 +453,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = "α1.1";
 				PRODUCT_BUNDLE_IDENTIFIER = "Wasedasai2021.nyukoukanri2021-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "早稲田祭2021入構管理アプリver.α1.0";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -464,7 +468,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = nyukoukanri2021_1/nyukoukanri2021_1.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: motoya shiraki (X72VXGZ9C2)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = Alpha1.1;
 				DEVELOPMENT_TEAM = X72VXGZ9C2;
 				INFOPLIST_FILE = nyukoukanri2021_1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -472,8 +478,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = "α1.1";
 				PRODUCT_BUNDLE_IDENTIFIER = "Wasedasai2021.nyukoukanri2021-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "早稲田祭2021入構管理アプリver.α1.0";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "toToyama", sender: nil)
     }
     @IBAction func Login(_ sender: Any) {
-        let sentURL = "https://yahoo.co.jp"
+        let sentURL = "https://docs.google.com/presentation/d/1zWIrRnRylBew4BxDK2JOnsD4awodRSGvhDuUeRDpY3A/edit?usp=sharing"
         let encordedURL = sentURL.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
         let URL = NSURL(string: encordedURL!)
         let request = NSURLRequest(url: URL! as URL)
