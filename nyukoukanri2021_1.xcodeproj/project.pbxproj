@@ -445,7 +445,7 @@
 				CODE_SIGN_ENTITLEMENTS = nyukoukanri2021_1/nyukoukanri2021_1.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: motoya shiraki (X72VXGZ9C2)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = Beta1.1.6;
+				CURRENT_PROJECT_VERSION = Beta1.2.7;
 				DEVELOPMENT_TEAM = X72VXGZ9C2;
 				INFOPLIST_FILE = nyukoukanri2021_1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -453,7 +453,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "β1.1.6";
+				MARKETING_VERSION = "β1.2.7";
 				PRODUCT_BUNDLE_IDENTIFIER = "Wasedasai2021.nyukoukanri2021-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Wasedasai2021.nyukoukanri2021-1 AdHoc";
@@ -471,7 +471,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: motoya shiraki (X72VXGZ9C2)";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: motoya shiraki (X72VXGZ9C2)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = Beta1.1.6;
+				CURRENT_PROJECT_VERSION = Beta1.2.7;
 				DEVELOPMENT_TEAM = X72VXGZ9C2;
 				INFOPLIST_FILE = nyukoukanri2021_1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -479,7 +479,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "β1.1.6";
+				MARKETING_VERSION = "β1.2.7";
 				PRODUCT_BUNDLE_IDENTIFIER = "Wasedasai2021.nyukoukanri2021-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Wasedasai2021.nyukoukanri2021-1 AdHoc";
