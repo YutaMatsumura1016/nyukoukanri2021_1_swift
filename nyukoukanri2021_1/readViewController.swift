@@ -15,13 +15,29 @@ class readViewController: UIViewController, NFCTagReaderSessionDelegate, WKNavig
 
     @IBOutlet weak var reLoad: UIButton!
     @IBOutlet weak var webView: WKWebView!
-    
-    
+    @IBOutlet weak var ueWaseda: UIImageView!
+    @IBOutlet weak var ueToyama: UIImageView!
+    @IBOutlet weak var ueGakkan: UIImageView!
+    @IBOutlet weak var ueKougai: UIImageView!
     
     //関数
     override func viewDidLoad() {
         super.viewDidLoad()
         readNFC()
+        
+        if gate == "waseda"{
+            ueToyama.isHidden = true
+            ueKougai.isHidden = true
+            ueGakkan.isHidden = true
+        }else if gate == "toyama"{
+            ueWaseda.isHidden = true
+            ueKougai.isHidden = true
+            ueGakkan.isHidden = true
+        }else if gate == "kougai"{
+            ueWaseda.isHidden = true
+            ueToyama.isHidden = true
+            ueGakkan.isHidden = true
+        }
     }
     
     @IBAction func reLoad(_ sender: Any) {
@@ -104,7 +120,7 @@ class readViewController: UIViewController, NFCTagReaderSessionDelegate, WKNavig
             session.alertMessage = idmString
             session.invalidate()
             
-            Thread.sleep(forTimeInterval: 1.5)
+            Thread.sleep(forTimeInterval: 1.3)
             self.sentURL = "https://script.google.com/a/wasedasai.net/macros/s/AKfycbzdl8gVXhd2Dkqy1B6-rTGKD_ewKWpS2FimTIkZiOA2bVf_IQo/exec?idm=" + idmString + "&&gate=" + self.gate
 
         }
